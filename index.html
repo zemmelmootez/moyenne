@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>moyenne calcule</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+
+input[type=number] , numberarea {
+
+  width: 40%;
+  padding: 12px;
+  margin:5px;
+  border: none;
+  border-bottom: 2px solid lightcoral;
+  resize: vertical;
+}
+
+
+label {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  
+}
+
+.container {
+  border-radius: 5px;
+  margin:auto;
+  padding: 30px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+}
+.div-popup {
+  
+  
+  bottom: 0;
+  margin-left:500px;
+  
+  
+}
+.div-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+.div-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.div-container .btn {
+  background-color: Blue;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.div-container .cancel {
+  background-color: red;
+  
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}  
+.div-popup:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .div-popup  {
+
+     position: relative;
+     margin-left: 10px;
+     margin-top:50px;
+  }
+  .open-button{
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 600px;
+  width: 20%;
+}
+
+}
+    
+</style>
+</head>
+<body>
+  <script>
+
+ function calcu()
+ {
+  
+  if(f.T1.value!="" 
+         && f.T2.value!=""
+         && f.T3.value!=""
+         && f.T4.value!=""
+         && f.T5.value!=""
+         && f.T6.value!=""
+         && f.T7.value!=""
+         && f.T8.value!=""
+         && f.T9.value!=""
+         && f.T10.value!=""
+         && f.T11.value!=""
+         && f.T12.value!=""
+        &&  f.T13.value!=""
+        &&  f.T14.value!=""
+        &&  f.T15.value!=""
+        &&  f.T16.value!=""
+        &&  f.T17.value!=""
+        &&  f.T18.value!=""
+        &&  f.T19.value!=""
+        &&  f.T20.value!=""
+        &&  f.T21.value!=""
+        &&  f.T22.value!=""
+        &&  f.T23.value!=""
+        &&  f.T24.value!=""
+        &&  f.T25.value!=""
+        &&  f.T26.value!=""
+  
+         )
+         {
+           //analyse moy
+    moyanalyse=(3*f.T1.value+7*f.T2.value)/10;
+         
+         //algebre moy
+         moyalgebre=(3*f.T3.value+7*f.T4.value)/10;
+  
+         //electrostatique
+         moyelectrostatique=(3*f.T5.value+7*f.T6.value)/10;
+  
+         //electrocinetique
+         moyelectrocinetique=(3*f.T7.value+7*f.T8.value)/10;
+  
+         //optique 
+         moyoptique=(1*f.T9.value+1*f.T11.value+2*f.T10.value)/4;
+  
+         //atelierphysique
+         moyatelierphysique=1*f.T12.value;
+  
+         //algorithme
+         moyalgorithme=(3*f.T13.value+7*f.T14.value)/10;
+  
+         //programmation
+         moyprogrammation=(3*f.T15.value+7*f.T16.value)/10;
+         
+         //atelierprogrammation
+         moyatelierprogrammation=1*f.T17.value;
+       
+          //anglais
+         moyanglais=(3*f.T18.value+7*f.T19.value)/10;
+  
+         //Francais
+         moyfrancais=(3*f.T20.value+7*f.T21.value)/10;
+  
+          //c2i 
+          moyc2i=(2*f.T22.value+2*f.T24.value+6*f.T23.value)/10;
+          //gestion 
+          moygestion=(3*f.T25.value+7*f.T26.value)/10;
+  
+          moytotal= (2*moyanalyse+2*moyalgebre+2*moyelectrostatique+2*moyelectrocinetique+2*moyoptique+1*moyatelierphysique+3*moyalgorithme+1*moyprogrammation+2*moyatelierprogrammation+1*moyanglais+1*moyfrancais+2*moyc2i+1*moygestion)/22;
+          
+         }
+         
+         if(moytotal>=10)
+         { 
+          
+           document.getElementById("moyenne").value = moytotal;
+           document.getElementById("statut").value ="7alla m3ak";
+         
+          }
+          else 
+          { 
+           
+            document.getElementById("moyenne").value = moytotal;
+           document.getElementById("statut").value ="ekbs ro7k 3adi";
+           
+          
+          }
+      
+ }
+  
+
+
+    </script>
+    <h1>By Mo3</h1>
+<div class="container">
+  <form name=f action=""  onsubmit="return false">
+  
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Analyse</label>
+        <br>
+      </div>
+      <div class="col-75">
+        <input type="number"  required placeholder="DS" min="0" max="20"  step="0.01"  name="T1">
+        <input type="number" required placeholder="Examen" min="0" max="20"  step="0.01" name="T2">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Algebre</label>
+      </div>
+      <div class="col-75">
+        <input type="number"  required placeholder="DS"  min="0" max="20"  step="0.01" name="T3">
+        <input type="number"  required placeholder="Examen"  min="0" max="20"  step="0.01"name="T4">
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="lname">Electrostatique</label>
+        </div>
+        <div class="col-75">
+          <input type="number"  required placeholder="DS"  min="0" max="20"  step="0.01" name="T5">
+          <input type="number"  required placeholder="Examen"  min="0" max="20"  step="0.01" name="T6">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Electrocinetique</label>
+        </div>
+        <div class="col-75">
+          <input type="number" required  placeholder="DS"  min="0" max="20"  step="0.01"name="T7">
+          <input type="number"  required placeholder="Examen"  min="0" max="20"  step="0.01" name="T8">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Optique</label>
+        </div>
+        <div class="col-75">
+          <input type="number" style="width:120px" required placeholder="DS"  min="0" max="20"  step="0.01" name="T9">
+          <input type="number" style="width:120px" required placeholder="Examen"  min="0" max="20"  step="0.01" name="T10">
+          <input type="number" style="width:70px" required placeholder="Tp"  min="0" max="20"  step="0.01" name="T11">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Atelier de physique</label>
+        </div>
+        <div class="col-75">
+          <input type="number" required  placeholder="Examen Tp"  min="0" max="20"  step="0.01" name="T12">
+        
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Algorithme</label>
+        </div>
+        <div class="col-75">
+          <input type="number" required placeholder="DS"  min="0" max="20"  step="0.01" name="T13">
+          <input type="number"  required placeholder="Examen"  min="0" max="20"  step="0.01" name="T14">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Programmation</label>
+        </div>
+        <div class="col-75">
+          <input type="number" required placeholder="DS"  min="0" max="20"  step="0.01" name="T15">
+          <input type="number" required  placeholder="Examen"  min="0" max="20"  step="0.01" name="T16">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Atelier de programmation</label>
+        </div>
+        <div class="col-75">
+          <input type="number" required  placeholder="Examen Tp"  min="0" max="20"  step="0.01" name="T17">
+        
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Anglais</label>
+        </div>
+        <div class="col-75">
+          <input type="number" required placeholder="DS" min="0" max="20"  step="0.01" name="T18">
+          <input type="number" required placeholder="Examen" min="0" max="20"  step="0.01" name="T19">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Français</label>
+        </div>
+        <div class="col-75">
+          <input type="number" required placeholder="DS"  min="0" max="20"  step="0.01" name="T20">  
+          <input type="number" required placeholder="Examen"  min="0" max="20"  step="0.01" name="T21">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">C2I</label>
+        </div>
+        <div class="col-75">
+          <input type="number" style="width:120px" required placeholder="DS"  min="0" max="20"  step="0.01" name="T22">
+          <input type="number" style="width:120px" required placeholder="Examen"  min="0" max="20"  step="0.01" name="T23">
+          <input type="number" style="width:70px" required placeholder="Tp"  min="0" max="20"  step="0.01" name="T24">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Gestion</label>
+        </div>
+        <div class="col-75">
+          <input type="number" required placeholder="DS"  min="0" max="20"  step="0.01" name="T25">
+          <input type="number" required placeholder="Examen"  min="0" max="20"  step="0.01" name="T26">
+        </div>
+      </div>
+    
+      <div class="div-popup"id="myForm" >
+        <div  class="div-container">
+         
+      
+          <label for="moyenne"><b>Moyenne</b></label>
+          <input type="text"  name="moyenne" id="moyenne" disabled >
+          
+          <input type="text" placeholder="" name="statut"  id="statut" disabled>
+          
+          <input type="submit" class="btn" onclick="calcu()"value="calculer">
+          <input type="reset" class="cancel"  value="supprimer">
+        </div>
+      </div>
+      <div >
+        
+      </div>
+    </form>
+     
+   
+     <style>
+     
+
+ </style>
+
+
+     
+
+
+  
+     
+      
+              
+    
+
+  
+
+
+</body>
+</html>
